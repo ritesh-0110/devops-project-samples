@@ -4,16 +4,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.microsoft</groupId>
-	<artifactId>ROOT</artifactId>
-	<version>1.0</version>
-	<packaging>war</packaging>
-	<name>Sample Spring App</name>
+    <artifactId>ROOT</artifactId>
+    <version>1.0</version>
+    <packaging>war</packaging>
+    <name>Sample Spring App</name>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.7.RELEASE</version>
     </parent>
-	<repositories>
+    <repositories>
        <repository>
           <id>central</id>
           <name>Central</name>
@@ -22,15 +22,14 @@
     </repositories>
     <dependencies>
         <dependency>
-			<groupId>com.microsoft.azure</groupId>
-			<artifactId>applicationinsights-web</artifactId>
-			<!-- or applicationinsights-core for bare API -->
-			<version>[1.0,)</version>
-		</dependency>
-		<dependency>
+            <groupId>com.microsoft.azure</groupId>
+            <artifactId>applicationinsights-web</artifactId>
+            <version>[1.0,)</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>    		
+        </dependency>            
     </dependencies>
 
     <properties>
@@ -38,8 +37,14 @@
     </properties>
 
     <build>
-	<finalName>ROOT</finalName>
+        <finalName>ROOT</finalName>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.4.0</version>
+            </plugin>
+            
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
