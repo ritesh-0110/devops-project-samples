@@ -62,5 +62,17 @@
             </plugin>
         </plugins>
     </build>
+<distributionManagement>
+    <repository>
+        <id>your-repo-id</id>
+        <name>Your Release Repository</name>
+        <url>https://your-nexus-or-artifactory-url/repository/maven-releases/</url>
+    </repository>
 
+    <snapshotRepository>
+        <id>your-repo-id-snapshot</id>
+        <name>Your Snapshot Repository</name>
+        <url>https://your-nexus-or-artifactory-url/repository/maven-snapshots/</url>
+    </snapshotRepository>
+</distributionManagement>
 </project>
